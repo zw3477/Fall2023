@@ -18,7 +18,7 @@ namespace fre::bsm {
 			double f = R * S0; //!!! implement this
 			double s = σ * sqrt(t); //!!! implement this
 
-			return fre::black::put::value(f, s, k)/R;
+			return fre::black::put::value(f, s, k)/R; 
 		}
 	}
 } // namespace fre::bsm
