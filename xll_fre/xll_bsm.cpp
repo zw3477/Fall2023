@@ -1,4 +1,4 @@
-// xll_bsm.cpp - Black-Scholes-Merton model for European options.
+ï»¿// xll_bsm.cpp - Black-Scholes-Merton model for European options.
 #include "fre_bsm.h"
 #include "xll_fre.h"	
 
@@ -17,9 +17,9 @@ AddIn xai_bsm_put_value(
 	.FunctionHelp("Return the Black-Scholes-Merton put value.")
 );
 // !!! Implement xll_bsm_put_value
-double WINAPI xll_bsm_put_value(double r, double S0, double ¦Ò, double k, double t)
+double WINAPI xll_bsm_put_value(double r, double S0, double Ïƒ, double k, double t)
 {
 #pragma XLLEXPORT
 
-	return fre::bsm::put::value(r, S0, ¦Ò, k, t);
+	return fre::bsm::put::value(r, S0, Ïƒ, k, t);
 }
