@@ -21,5 +21,5 @@ double WINAPI xai_bsm_put_value(double r, double S0, double ¦Ò, double k, double
 {
 #pragma XLLEXPORT
 
-	return fre::black::put::value(r, S0, ¦Ò, k, t);
+	return fre::bsm::put::value(r, S0, ¦Ò, k, t);
 }
