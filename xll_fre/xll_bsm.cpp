@@ -11,7 +11,7 @@ AddIn xai_bsm_put_value(
 		Arg(XLL_DOUBLE, "S0", "is the initial stock price."),
 		Arg(XLL_DOUBLE, "sigma", "is the volatility."),
 		Arg(XLL_DOUBLE, "k", "is the strike price."),
-		Arg(XLL_DOUBLE, "t", "is the time to expiration."),
+		Arg(XLL_DOUBLE, "t", "is the time in year to expiration."),
 		})
 	.Category(CATEGORY)
 	.FunctionHelp("Return the Black-Scholes-Merton put value.")
@@ -20,6 +20,6 @@ AddIn xai_bsm_put_value(
 double WINAPI xll_bsm_put_value(double r, double S0, double σ, double k, double t)
 {
 #pragma XLLEXPORT
-
+	
 	return fre::bsm::put::value(r, S0, σ, k, t);
-}
+}  

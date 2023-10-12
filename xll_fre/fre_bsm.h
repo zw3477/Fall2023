@@ -6,7 +6,7 @@
 #include "fre_black.h"
 
 namespace fre::bsm {
-
+	
 #pragma warning(disable: 4100)
 	namespace put {
 		// Value is E[(k - S)^+]/R, where R = exp(r t).
@@ -14,9 +14,9 @@ namespace fre::bsm {
 		//                  --bond--|-------stock--------  ------option------
 		inline double value(double r, double S0, double σ, double k, double t)
 		{
-			double R = exp(r * t); //!!! implement this
+			double R = std::exp(r * t); //!!! implement this
 			double f = R * S0; //!!! implement this
-			double s = σ * sqrt(t); //!!! implement this
+			double s = σ * std::sqrt(t); //!!! implement this
 
 			return fre::black::put::value(f, s, k)/R; 
 		}
